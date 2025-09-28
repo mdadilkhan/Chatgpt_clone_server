@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import Conversation from "../conversation/conversation.model";
 import Message from "./message.model";
-import axios from "axios";
 import { GoogleGenAI } from "@google/genai";
 
 // const GOOGLE_LLM_API_URL = "https://api.example.com/google-llm"; // replace with real LLM endpoint
