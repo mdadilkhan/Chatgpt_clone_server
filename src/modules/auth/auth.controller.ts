@@ -75,8 +75,8 @@ console.log(token);
      
      res.cookie('token',token,{
         httpOnly:true,
-        secure:config.env==='production',
-        sameSite: "lax", // Prevents CSRF attacks
+        secure:true,
+        sameSite: "none", // Prevents CSRF attacks
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 day
      })
      
@@ -118,13 +118,12 @@ export const socialLogin=async(req:Request,res:Response,next:NextFunction)=>{
 
      console.log("token",token);
      
-     res.cookie('token',token,{
+       res.cookie('token',token,{
         httpOnly:true,
-        secure:config.env==='production',
-        sameSite: "lax", // Prevents CSRF attacks
+        secure:true,
+        sameSite: "none", // Prevents CSRF attacks
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 day
      })
-
      return res.status(200).json({ message: "Login Success"});
         
     } catch (error) {
@@ -139,8 +138,8 @@ export const socialLogin=async(req:Request,res:Response,next:NextFunction)=>{
 export const logout = async (req: Request, res: Response, next: NextFunction) => {
   res.clearCookie("token", {
     httpOnly: true,
-    secure: config.env === 'production',
-    sameSite: "lax",
+    secure: true,
+    sameSite: "none",
   });
 
   res.status(200).json({ message: "Logged out successfully" });
