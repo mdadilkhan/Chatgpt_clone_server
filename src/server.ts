@@ -14,7 +14,8 @@ const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:5173",
     "https://sub.yourdomain.com",
-    "https://anotherdomain.com"
+    "https://anotherdomain.com",
+    "https://chatgpt-clone-client-azure.vercel.app"
   ];
   
 
