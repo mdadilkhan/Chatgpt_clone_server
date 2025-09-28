@@ -9,6 +9,7 @@
     "outDir": "dist",
     "rootDir": "./src",
     "removeComments": true,
+    "types": ["node"]   
     // "baseUrl": ".",
     // "paths": {
     //   "@/*":["src/*"]
